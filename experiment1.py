@@ -20,7 +20,7 @@ def main():
 
     running = 1
 
-    def get_tophits() :
+    def get_tophits():
         artist_name = enter.get()
         res = sporeads()
         res.getreads(artist_name)
@@ -29,7 +29,7 @@ def main():
 
     def show_data (song_dict, artist_name) :  # show the data we get from spotify web api
         root1 = Tk()  # sub window
-        root1.geometry('1200x600')
+        root1.geometry('1200x300')
         root1.title(artist_name + 'Top Hits')
 
         for idx, track in enumerate(song_dict['tracks']['items']):  # put the data of each song we got into the frame
@@ -46,7 +46,7 @@ def main():
         Label(root1, text='*popularity: popularity index given by Spotify',
               fg='black').place(x=40, y=20, height=40)
 
-        Button(root1, text='quit', width=10, command=root1.quit).place(x=500, y=100, width=80, height=40)  # 退出按钮
+        Button(root1, text='quit', width=10, command=root1.quit).place(x=1000, y=245, width=80, height=40)  # quit button
         root1.mainloop()
 
 
