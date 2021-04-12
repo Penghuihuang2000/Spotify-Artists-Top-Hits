@@ -15,7 +15,7 @@ def main():
     enter = Entry(root)  # input the artist you wanna search
     enter.grid(row=0, column=1, padx=20, pady=20)  # adjust the position
     enter.delete(0, END)
-    enter.insert(0, 'Ariana Grande')  # the default artist is Katy Perry
+    enter.insert(0, 'Ariana Grande')  # the default artist is Ariana Grande
 
 
     running = 1
@@ -32,7 +32,7 @@ def main():
         root1.geometry('1200x600')
         root1.title(artist_name + 'Top Hits')
 
-        for idx, track in enumerate(song_dict['tracks']['items']):  # 将每一天的数据放入列表中
+        for idx, track in enumerate(song_dict['tracks']['items']):  # put the data of each song we got into the frame
             LANGS = [(str(idx+1), 'rank'),
                      (track['name'], 'song'),
                      (track['album']['name'], 'album'),
